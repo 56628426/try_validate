@@ -13,6 +13,7 @@ def main():
 
         if choice == "1":
             def register():
+                print("")
                 print("\nRegistering")
                 user_data['name'] = input('Enter your name: ')
                 user_data['contact'] = int(input('Enter your contact number: '))
@@ -29,6 +30,7 @@ def main():
                 if not user_data:
                     print("Please register first.")
                     return
+                print("")
                 print("\nLogin form")
                 name = input('Enter your name: ')
                 email = input('Enter your email: ')
@@ -41,6 +43,7 @@ def main():
         elif choice == "3":
             def results():
                 if user_data:
+                    print("")
                     print("\nYour Profile:")
                     print(f"Name: {user_data.get('name', 'N/A')}")
                     print(f"Contact: {user_data.get('contact', 'N/A')}")
@@ -53,16 +56,19 @@ def main():
             results()
 
         elif choice == "4":
+            print("")
             print("Continuing... (Placeholder for further actions)")
 
         elif choice == "5":
             def edit():
+                print("")
                 print("\nEdit your profile")
                 register()
                 print("Profile updated.")
             edit()
 
         elif choice == "6":
+            print("")
             print("Goodbye!")
             break
 
